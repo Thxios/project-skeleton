@@ -9,10 +9,14 @@ class ExampleAPI(HaiAPI):
         self.font = ImageFont.truetype(font, size=20)
 
     def query_image2text(self, image: Image.Image, **kwargs):
+        """returns the information of the image as text"""
+
         image_info = f'Resolution: {image.size}, InfoDict: {image.info}'
         return image_info
 
     def query_image2image(self, image: Image.Image, **kwargs):
+        """convert the image into grayscale"""
+
         image_grayscale = image.convert('L')
         return image_grayscale
 

@@ -12,7 +12,11 @@ def main():
     api = get_api()
 
     query = st.text_area('input')
-    print(query)
+    response = api.query_text2text(query)
+
+    st.write(f'Query:\n{query}')
+    st.write(f'Response:\n{response}')
+
 
 if __name__ == '__main__':
     main()
