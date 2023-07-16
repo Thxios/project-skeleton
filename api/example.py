@@ -1,11 +1,9 @@
 
-from api.base import HaiAPI
+from base import HaiAPI
 from PIL import Image, ImageDraw, ImageFont
 
-
-
 class ExampleAPI(HaiAPI):
-    def __init__(self, font='malgun.ttf'):
+    def __init__(self, font='./malgun.ttf'):
         self.font = ImageFont.truetype(font, size=20)
 
     def query_image2text(self, image: Image.Image, **kwargs):
